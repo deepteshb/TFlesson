@@ -3,3 +3,11 @@ resource "aws_instance" "prod1-webserver" {
     instance_type = "t2.micro"
   
 }
+
+resource "aws_s3_bucket" "myRemoteBackend" {
+  bucket = "my-remote-backend-01"
+
+  tags = {
+    Name        = "My Remote Backend"
+  }
+}
